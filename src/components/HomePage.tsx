@@ -35,7 +35,8 @@ const HomePage: React.FC<HomePageProps> = ({ onPageChange }) => {
       icon: Users,
       image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
       gradient: 'from-orange-600 to-red-600'
-    }
+    },
+    
   ];
 
   return (
