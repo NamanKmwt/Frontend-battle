@@ -50,9 +50,9 @@ const StatsPage: React.FC = () => {
   ];
 
   const userEngagementData = [
-    { name: 'Active Users', value: 68, color: '#ea580c' },
-    { name: 'Inactive Users', value: 23, color: '#dc2626' },
-    { name: 'New Users', value: 9, color: '#f97316' },
+    { name: 'Active Users', value: 68, color: 'pink' },
+    { name: 'Inactive Users', value: 23, color: 'hotpink' },
+    { name: 'New Users', value: 9, color:'#ff8080' },
   ];
 
   const deviceData = [
@@ -70,10 +70,10 @@ const StatsPage: React.FC = () => {
   ];
 
   const stats = [
-    { label: 'Total Users', value: '12.4K', growth: '+23%', color: 'from-orange-400 to-red-600' },
-    { label: 'Monthly Active', value: '8.7K', growth: '+18%', color: 'from-red-400 to-orange-600' },
-    { label: 'Total Posts', value: '3.2K', growth: '+34%', color: 'from-orange-500 to-red-500' },
-    { label: 'Engagement Rate', value: '78%', growth: '+12%', color: 'from-red-500 to-orange-500' },
+    { label: 'Total Users', value: '12.4K', growth: '+23%', color: 'from-pink-400 to-red-600' },
+    { label: 'Monthly Active', value: '8.7K', growth: '+18%', color: 'from-red-400 to-pink-600' },
+    { label: 'Total Posts', value: '3.2K', growth: '+34%', color: 'from-pink-500 to-red-500' },
+    { label: 'Engagement Rate', value: '78%', growth: '+12%', color: 'from-red-500 to-pink-500' },
   ];
 
   const metrics = [
@@ -93,7 +93,7 @@ const StatsPage: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-pink-400 to-red-600 bg-clip-text text-transparent">
             Analytics Dashboard
           </h1>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
@@ -142,7 +142,7 @@ const StatsPage: React.FC = () => {
               {/* Glowing border effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
               
-              <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-500 group">
+              <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-pink-500/50 transition-all duration-500 group">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-gray-300 text-sm font-medium">{stat.label}</h3>
                   <span className="text-green-400 text-sm font-bold">{stat.growth}</span>
@@ -172,8 +172,8 @@ const StatsPage: React.FC = () => {
               onClick={() => setSelectedMetric(metric.id)}
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
                 selectedMetric === metric.id
-                  ? 'bg-orange-600 text-white'
-                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700 hover:text-orange-400'
+                  ? 'bg-pink-600 text-white'
+                  : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700 hover:text-pink-400'
               }`}
             >
               <span className="text-lg">{metric.icon}</span>
@@ -317,7 +317,7 @@ const StatsPage: React.FC = () => {
                           color: '#fff'
                         }} 
                       />
-                      <Bar dataKey="users" fill="#ea580c" radius={[4, 4, 0, 0]} />
+                      <Bar dataKey="users" fill="#ff8080" radius={[4, 4, 0, 0]} />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
@@ -343,7 +343,7 @@ const StatsPage: React.FC = () => {
                     <YAxis stroke="#9ca3af" />
                     <Tooltip 
                       contentStyle={{ 
-                        backgroundColor: '#1f2937', 
+                        backgroundColor: '#f47171', 
                         border: '1px solid #374151',
                         borderRadius: '8px',
                         color: '#fff'
@@ -377,7 +377,7 @@ const StatsPage: React.FC = () => {
                       className="flex items-center justify-between p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="w-8 h-8 bg-gradient-to-r from-orange-400 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
                           {index + 1}
                         </div>
                         <div>
@@ -386,7 +386,7 @@ const StatsPage: React.FC = () => {
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className="text-orange-400 font-bold">{topic.engagement}%</div>
+                        <div className="text-pink-400 font-bold">{topic.engagement}%</div>
                         <div className="text-gray-400 text-sm">engagement</div>
                       </div>
                     </motion.div>
