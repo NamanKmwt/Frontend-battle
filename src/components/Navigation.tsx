@@ -22,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({
     { id: 'products', label: 'Products' },
     { id: 'services', label: 'Services' },
     { id: 'communities', label: 'Communities' },
-    { id: 'stats', label: 'Communities' }
+    { id: 'stats', label: 'Stats' }
   ];
 
   return (
